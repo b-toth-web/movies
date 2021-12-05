@@ -1,0 +1,15 @@
+<div class="details">
+    <mat-card *ngIf="movie" class="details__card">
+        <mat-card-header>
+            <mat-card-title>{{movie.title}}</mat-card-title>
+            <mat-card-subtitle>{{movie.overview}}</mat-card-subtitle>
+            <img mat-card-lg-image [src]="imgUrl + movie.poster_path">
+        </mat-card-header>
+        <mat-card-content>
+            <p>Release date: {{movie.release_date}}</p>
+            <p>Popularity: {{movie.popularity}}</p>
+            <p>Vote average: {{movie.vote_average}}</p>
+            <p>Vote count: {{movie.vote_count}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

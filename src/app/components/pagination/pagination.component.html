@@ -1,0 +1,24 @@
+<div class="pagination">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Year</mat-label>
+        <mat-select [(value)]="selectedYear" (selectionChange)="onSetYear($event)">
+            <mat-option *ngFor="let year of yearSelect" [value]="year">{{ year }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Page</mat-label>
+        <mat-select [(value)]="selectedPage" (selectionChange)="onSetPage($event)">
+            <mat-option *ngFor="let page of pageSelect" [value]="page">{{ page }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="right">
+        <mat-label>Sort by</mat-label>
+        <mat-select [(value)]="selectedSortBy" (selectionChange)="onSetSortBy($event)">
+            <mat-option *ngFor="let item of sortBySelect" [value]="item.id">{{ item.label }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+</div>

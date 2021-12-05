@@ -1,0 +1,9 @@
+<app-pagination></app-pagination>
+
+<div class="list">
+    <mat-card class="list__item" *ngFor="let movie of (movieResults$ | async)" (click)="onSelectMovie(movie.id)">
+        <mat-card-title>{{ movie.title }}</mat-card-title>
+        <mat-card-subtitle>{{ movie.overview }}</mat-card-subtitle>
+        <img mat-card-lg-image [src]="imgUrl + movie.poster_path">
+    </mat-card>
+</div>

@@ -1,0 +1,24 @@
+.list {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    &__item {
+        cursor: pointer;
+        max-width: 152px;
+        margin: 0 .5em 1em;
+        transition: all 300ms ease;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
+
+        &:hover {
+            transform: scale( 105% );
+        }
+
+        img {
+            display: block;
+            margin: 0 auto; 
+        }
+    }
+}
